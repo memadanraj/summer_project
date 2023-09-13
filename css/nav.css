@@ -1,0 +1,80 @@
+body{
+    background-color: #f1f1f1;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+  
+}
+header{
+    background-color: #13045e;
+    padding: 15px;
+
+}
+ header li{
+    display: inline;
+    padding-left: 45px;
+    
+ }
+  header li a {
+    color: #f1f1f1;
+   
+    
+    text-decoration: none;
+    padding: 13px;
+    margin-top: -20px;
+    transition: .3s ease  ;
+  }
+  header li a:hover {
+    color: #12b6cc;
+   
+  }
+  header li img {
+    width: 109px;
+    float: left;
+    margin-top: -20px;
+    margin-left: -20px;
+    overflow: hidden;
+    
+  }
+  .txtlogo{
+    padding: 9px;
+    padding-left: 100px;
+    margin-top: -45PX;
+
+  }
+  header li p{
+    color: azure;
+    float: left;
+    padding-left: 10px;
+    margin-top: -1px;
+    font-size:  20px;
+    font-family: fantasy ;
+    font-style: oblique;
+   
+  }
+  .newa{
+    color: black;
+    /* background-color: #f1f1f1; */
+   
+  
+  }
+  .back{
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin-top: -10px;
+    margin-left: 103px;
+    width: 30px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+   
+  }
+  .navitm{
+    
+    margin-top: -20px;
+  }
+
+ header li .logout {
+
+    padding-left: 100px;
+  }

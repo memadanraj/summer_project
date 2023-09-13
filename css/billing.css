@@ -1,0 +1,61 @@
+body{
+    background-color: #f1f1f1;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+}
+.detailform{
+ 
+ padding: 20px;
+
+
+ }
+ p{
+    font-family:sans-serif;
+    font-size: larger;
+   
+ }
+center{
+    padding: 20px;
+
+    margin-top: 20px;
+    font-size: 20px;
+
+}
+ .cdiv{
+    margin-top: -80px;
+    float: right;
+    margin-right: 40px;
+
+ }
+
+ .proinfo{
+ overflow: hidden;
+    float: left;
+    margin-left: 735px;
+    
+   
+    
+ }
+ .addrowbtn{
+    background-color: rgb(3, 3, 158);
+   color: white;
+   border-radius: 5px;
+}
+.totalsum{
+    position: relative;
+left : 57%;
+    text-align: right;
+}
+.action{
+    width: 50px;
+    text-align: center;
+    color: rgb(14, 36, 149);
+
+    font-weight: bolder;
+    
+  
+    
+}
+

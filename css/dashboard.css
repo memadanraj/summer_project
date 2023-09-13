@@ -1,0 +1,38 @@
+
+    .menu-heading{
+       
+    margin-bottom: 20px;
+}
+
+.menu-heading h1{
+    margin-bottom: 0;
+}
+
+
+
+    .dashboard-grid{
+        margin: auto;
+        width: 63%;
+
+       
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    gap: 25px;
+    
+}
+
+.dashboard-card{
+ 
+    background-color: darkblue;
+    color: white;
+    padding: 0 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 2px 8px gray;
+}
+
+.dashboard-card h3{
+    font-size: 30px;
+    font-family: sans-serif;
+}
