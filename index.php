@@ -12,7 +12,7 @@ include 'connect.php';
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restraunt</title>
+    <title>NEWA Cottage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -38,6 +38,7 @@ include 'connect.php';
                 <li><a href="#food-menu">Menu</a></li>
                 <li><a href="#testimonials">Testimonial</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="admin.php">Admin Login</a></li>
             </ul>
             <h1 class="logo"><img  class="logo_start" src="newlogo.png" alt=""> </h1>
         </div>
@@ -56,9 +57,9 @@ include 'connect.php';
         <div class="about-wrapper container">
             <div class="about-text">
                 <p class="small">About Us</p>
-                <h2>We've beem making healthy food last for 10 years</h2>
+                <h2>We've been making healthy food last for 10 years</h2>
                 <p>
-                    Welcome to New Cottage, a culinary institution in the heart of Bikash Chowk.
+                    Welcome to Newa Cottage, a beautiful cottage in the heart of Bikash Chowk.
                      For nearly two decades,we have been dedicated to offering
                       a taste of Nepal through our mouthwatering fast food 
                       and traditional dishes. Since our inception in 2005,
@@ -223,7 +224,7 @@ include 'connect.php';
     <section id="contact">
         <div class="contact-container container">
             <div class="contact-img">
-                <img src="image/map.png" alt="" />
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3534.059438582938!2d84.40534487447545!3d27.653632676213373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994faede64dbb3f%3A0xe5b5353bc4101f38!2sNewa%20cottage%20and%20Restaurant!5e0!3m2!1sne!2snp!4v1705405749551!5m2!1sne!2snp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             <div class="form-container">

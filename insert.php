@@ -19,17 +19,22 @@ include 'nav.php';
     <link rel="stylesheet" href="css/insertform.css" />
 </head>
 <body>
+<br>
+
+<center> UPDATE Product</center><br >
+  <br>
 <div class="insert_form">
+  
     <form action="#" method = "POST"  enctype= "multipart/form-data">
         Image :
-        <input type="file" name = "uploadfile"> <br> <br>
+        <input type="file" name = "uploadfile" required> <br> <br>
 
     Product Name :
-    <input type="text" name="pname" id="">
+    <input type="text" name="pname" id="" required>
 
     Price :
 
-    <input type="text" name="pprice" id=""><br><br>
+    <input type="text" name="pprice" id="" required><br><br>
     
     Status:
 
@@ -42,7 +47,7 @@ include 'nav.php';
  
     Product description :<br> <br>
 
-    <textarea name="pdis" id="" cols="30" rows="5"></textarea>
+    <textarea name="pdis" id="" cols="30" rows="5" required></textarea>
 
  
 
@@ -59,6 +64,17 @@ include 'nav.php';
 include 'connect.php';
 ?>
 
+
+<?php session_start();
+
+    if(!isset($_SESSION['isloggedin'])){
+
+      echo '<script> alert ("You are Loged out !!"); </script> ';
+
+        header('Location: admin.php');
+    }
+
+?>
 <?php
 if (isset($_POST['upload'])){
 $filename= $_FILES["uploadfile"]["name"];

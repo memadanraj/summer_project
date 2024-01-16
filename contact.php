@@ -1,7 +1,20 @@
 
-<?php
 
-include '../connect.php';
+
+
+
+<?php session_start();
+
+    if(!isset($_SESSION['isloggedin'])){
+
+      echo '<script> alert ("You are Loged out !!"); </script> ';
+
+        header('Location: admin.php');
+    }
+
+?>
+<?php 
+include 'connect.php';
 
 ?>
 

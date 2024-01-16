@@ -1,3 +1,15 @@
+
+
+<?php session_start();
+
+    if(!isset($_SESSION['isloggedin'])){
+
+      echo '<script> alert ("You are Loged out !!"); </script> ';
+
+        header('Location: admin.php');
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

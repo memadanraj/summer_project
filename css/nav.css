@@ -1,15 +1,16 @@
-body{
+.body{
     background-color: #f1f1f1;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
     text-align: center;
+
   
 }
 header{
     background-color: #13045e;
     padding: 15px;
-
+    
 }
  header li{
     display: inline;
@@ -32,7 +33,7 @@ header{
   header li img {
     width: 109px;
     float: left;
-    margin-top: -20px;
+    margin-top: -36px;
     margin-left: -20px;
     overflow: hidden;
     
@@ -40,7 +41,7 @@ header{
   .txtlogo{
     padding: 9px;
     padding-left: 100px;
-    margin-top: -45PX;
+    margin-top: -36px;
 
   }
   header li p{
@@ -62,8 +63,7 @@ header{
   .back{
     background-color: #f1f1f1;
     padding: 15px;
-    margin-top: -10px;
-    margin-left: 103px;
+    
     width: 30px;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;

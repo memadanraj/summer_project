@@ -51,11 +51,12 @@ left : 57%;
 .action{
     width: 50px;
     text-align: center;
-    color: rgb(14, 36, 149);
-
+    color: rgb(255, 255, 255);
+background-color: darkblue;
     font-weight: bolder;
     
   
     
 }
+
 

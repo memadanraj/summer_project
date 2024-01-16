@@ -1,19 +1,11 @@
-<?php
-
-include '../connect.php';
-$sql = "SELECT * FROM nproduct";
-$result = mysqli_query($conn, $sql);
-
-$options = array();
-
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $options[] = $row;
-    }
-}
-
-$conn->close();
-
-
-echo json_encode($options);
-?>
+<?php 
+  include("../connect.php");
+ 
+   $sql = "SELECT * FROM nproduct WHERE np_id='".$_POST['id']."'";
+   $query = mysqli_query($conn,$sql);
+   while($row = mysqli_fetch_assoc($query))
+   {
+         $data = $row;
+   }
+    echo json_encode($data);
+ ?>

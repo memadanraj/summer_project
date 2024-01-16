@@ -399,15 +399,10 @@ body {
 
 .contact-img {
   width: 50%;
+  
 }
 
-.contact-img img {
-  display: block;
-  height: 400px;
-  width: 100%;
-  object-position: center;
-  object-fit: cover;
-}
+
 
 .form-container {
   padding: 1rem;

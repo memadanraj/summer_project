@@ -2,6 +2,16 @@
 
 
 
+<?php session_start();
+
+    if(!isset($_SESSION['isloggedin'])){
+
+      echo '<script> alert ("You are Loged out !!"); </script> ';
+
+        header('Location: admin.php');
+    }
+
+?>
 
    <?php
 include 'connect.php';
@@ -53,8 +63,10 @@ include 'nav.php';
     <link rel="stylesheet" href="css/insertform.css" />
 </head>
 <body>
+<br> <br>
 
-
+<center> UPDATE Product</center><br >
+  <br>
    <div class="insert_form">
     <form action="#" method = "POST" >
        

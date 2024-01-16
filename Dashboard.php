@@ -1,3 +1,14 @@
+
+<?php session_start();
+
+    if(!isset($_SESSION['isloggedin'])){
+
+      echo '<script> alert ("You are Loged out !!"); </script> ';
+
+        header('Location: admin.php');
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,12 +69,32 @@
          include 'connect.php';
         $count= 0;
         $cont=0;
+        $special=0;
+        $nspecial=0;
          $sql= " SELECT np_id FROM nproduct ";
          $result = mysqli_query($conn,$sql);
          if (mysqli_num_rows($result) > 0) {
                  
             while( mysqli_fetch_assoc($result)) {
                 $count++;
+            }
+         
+         }
+         $sqlforspecial= " SELECT np_id FROM nproduct Where np_status= 'Special' ";
+         $result = mysqli_query($conn,$sqlforspecial);
+         if (mysqli_num_rows($result) > 0) {
+                 
+            while( mysqli_fetch_assoc($result)) {
+                $special++;
+            }
+         
+         }
+         $sqlfornspecial= " SELECT np_id FROM nproduct Where np_status= 'nonSpecial' ";
+         $result = mysqli_query($conn,$sqlfornspecial);
+         if (mysqli_num_rows($result) > 0) {
+                 
+            while( mysqli_fetch_assoc($result)) {
+                $nspecial++;
             }
          
          }
@@ -77,13 +108,55 @@
             }
          
          }
+         $sqli= " SELECT SUM(g_total) FROM norder ";
+         $result = mysqli_query($conn,$sqli);
+         if (mysqli_num_rows($result) > 0) {
+                 
+            while($row = mysqli_fetch_assoc($result)) {
+                $revenu= $row['SUM(g_total)'];
+               
+         }
+        }
+        $ocount=0;
+        $sqli= " SELECT o_id FROM norder ";
+        $result = mysqli_query($conn,$sqli);
+        if (mysqli_num_rows($result) > 0) {
+                
+           while($row = mysqli_fetch_assoc($result)) {
+               $ocount++;
+              
+        }
+       }
+       $ccount=0;
+       $sqli= " SELECT p_mode FROM norder Where p_mode='cash' ";
+       $result = mysqli_query($conn,$sqli);
+       if (mysqli_num_rows($result) > 0) {
+               
+          while($row = mysqli_fetch_assoc($result)) {
+              $ccount++;
+             
+       }
+      }
+      $ecount=0;
+      $sqli= " SELECT p_mode FROM norder Where p_mode='Ebanking' ";
+      $result = mysqli_query($conn,$sqli);
+      if (mysqli_num_rows($result) > 0) {
+              
+         while($row = mysqli_fetch_assoc($result)) {
+             $ecount++;
+            
+      }
+     }
 
 
 ?>
+<h2>Dashboard</h2>
+<br>
 <center>
+
 <div class="menu-heading">
-    <h1>Dashboard</h1>
-    <hr>
+    
+    
 </div>
 <div class="dashboard-grid">
     <div class="dashboard-card">
@@ -97,8 +170,28 @@
     </div>
 
     <div class="dashboard-card">
-        <p>Total Income</p>
-        <h3>26</h3>
+        <p>Total Special</p>
+        <h3><?php echo $special ; ?></h3>
+    </div>
+    <div class="dashboard-card">
+        <p>Total NonSpecial</p>
+        <h3><?php echo $nspecial ; ?></h3>
+    </div>
+    <div class="dashboard-card">
+        <p>Total Revenus</p>
+        <h3><?php echo $revenu ; ?></h3>
+    </div>
+    <div class="dashboard-card">
+        <p>Total Invoice</p>
+        <h3><?php echo $ocount ; ?></h3>
+    </div>
+    <div class="dashboard-card">
+        <p>Total Cash Payment</p>
+        <h3><?php echo $ccount ; ?></h3>
+    </div>
+    <div class="dashboard-card">
+        <p>Total E-banking</p>
+        <h3><?php echo $ecount ; ?></h3>
     </div>
 </div>
 </center>
